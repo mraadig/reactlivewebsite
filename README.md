@@ -29,12 +29,6 @@ To get a local copy up and running, follow these steps:
 
 ```bash
 cd ApnaKitchen
-npm install
-
-Go to the project directory
-
-```bash
-  cd Namaste-React
 ```
 
 Install dependencies

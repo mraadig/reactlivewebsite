@@ -28,7 +28,7 @@ To get a local copy up and running, follow these steps:
 2. ### Install dependencies:
 
 ```bash
-cd ApnaKitchen
+cd reactlivewebsite
 ```
 
 Install dependencies
@@ -44,5 +44,5 @@ Start the server
 ```
 ## Contributors
 Contributions are welcome! If you'd like to add features, fix bugs, or improve the documentation, please fork the repository and create a pull request.
-This README.md file includes the steps for installing dependencies, building the application with Parcel, starting the development server, and a section inviting contributions. Adjust any paths or commands based on your specific project configuration.
+**This README.md file includes the steps for installing dependencies, building the application with Parcel, starting the development server, and a section inviting contributions. Adjust any paths or commands based on your specific project configuration**.
 

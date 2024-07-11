@@ -1,0 +1,198 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { IMG_CDN_URL } from "./constraints";
+import { restaurantList } from "./constraints";
+
+// const heading=React.createElement(
+//     "h1",{id:"tittle"
+//    ,key:"h1"},"Heading1"
+//  );
+//  // React.createElement ==> Object ==> HTML(DOM) 
+//  const heading1=React.createElement(
+//     "h2",{id:"tittle",key:"h2"},"Heading1"
+//  );
+//  const heading2=React.createElement(
+//     "h3",{id:"tittle",key:"h3"},"Heading1"
+//  );
+//  const container=React.createElement("div",{id:"title"},[heading,heading1,heading2,React.createElement(
+//     "h4",{id:"tittle",key:"h4"},"Hello"
+//  )]);
+
+ // Jsx==>React.createElement ==> Object ==> HTML(DOM) html render to dom
+
+
+/*  header
+     -Logo
+     -Nav-Item
+     -Cart
+    
+     Body
+      -SearchBar
+      -RestrauntList
+       -RetrauntCard
+         -image
+         -Name
+         -Rating
+         -Cusines
+     
+         Footer
+         -links
+         -copyRight
+ */
+
+ // React Element
+ const Title=()=>
+ (<a href="/" style={{ textDecoration: 'none' ,color:"red"}}><h2 id="hi" key="hi">ApnaKitchen</h2></a>)
+ 
+const HeaderComponent=()=>{
+  return(
+    <div className="header">
+      <Title/>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+        
+      </div>
+    </div>
+  );
+}
+const Body=()=>{
+  return(
+    <>
+    <h1>Body</h1>
+
+    <div className="restorent-list">
+      {
+        restaurantList.map((restaurant)=>{
+        return <RestorentCard {...restaurant.data}/>
+        })
+      }
+      {/* <RestorentCard {...restaurantList[5].data}/>
+      <RestorentCard {...restaurantList[6].data}/>
+      <RestorentCard {...restaurantList[7].data}/>
+      <RestorentCard {...restaurantList[8].data}/>
+      <RestorentCard {...restaurantList[9].data}/>
+      <RestorentCard {...restaurantList[10].data}/> */}
+
+    </div>
+    </>
+  )
+}
+
+const Footer=()=>{
+  return(
+    <div>
+      Footer
+    </div>
+  )
+}
+// config driven UI
+// const config=[
+//   {
+//     type:"carousel",
+//     card:[
+//       {
+//         offerName:"50% off"
+//       },
+//       {
+//         offerName:"No delivery Charge"
+//       }
+//     ]
+//   },
+//   {
+//     type:"Restorent",
+//     card:[
+//       {
+//         img:"https://api.time.com/wp-content/uploads/2015/01/burger-king-whopper.jpg?quality=85",
+//         name:"Burger King",
+//         cusines:["Burgers", "American"],
+//         rating:4.2
+//       },
+//       {
+//         img:"https://api.time.com/wp-content/uploads/2015/01/burger-king-whopper.jpg?quality=85",
+//         name:"KFC",
+//         cusines:["Burgers", "American"],
+//         rating:4.2
+//       }
+//     ]
+//   }
+// ]
+
+
+// const Burger=[{
+//   img:"https://api.time.com/wp-content/uploads/2015/01/burger-king-whopper.jpg?quality=85",
+//   name:"Burger King",
+//   cusines:["Burgers", "American"],
+//   rating:4.2
+// },{
+//   img:"https://api.time.com/wp-content/uploads/2015/01/burger-king-whopper.jpg?quality=85",
+//   name:"Burger King",
+//   cusines:["Burgers", "American"],
+//   rating:4.2
+// },{
+//   img:"https://api.time.com/wp-content/uploads/2015/01/burger-king-whopper.jpg?quality=85",
+//   name:"Burger King",
+//   cusines:["Burgers", "American"],
+//   rating:4.2
+// }]
+
+
+//props 
+const RestorentCard=({
+  cloudinaryImageId,
+  name,
+  cuisines,
+  area,
+  lastMileTravelString})=>{
+  return(
+    <div className="card">
+      <img src={IMG_CDN_URL+cloudinaryImageId} />
+      <h2>{name}</h2>
+      <p>{cuisines.join(", ")}</p>
+      <h4>
+        {lastMileTravelString} minutes
+      </h4>
+      <h5>{area}</h5>
+    </div>
+  )
+}
+
+
+const AppLayout=()=>{
+  return(
+    <>
+    <HeaderComponent/>
+    <Body/>
+    <Footer/>
+    </>
+  )
+}
+
+
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(<AppLayout/>);
+
+
+
+
+
+
+// Reading for Ref 
+// React Component
+ // Functional New Method
+ // Class Based C
+ //  const HeadingComp=()=>{
+//    return (
+//       <div>
+//       {Heading3()} 
+//       <Heading3/>
+//       <h1>BaBU</h1>
+//       <h2>Mahabirwawala</h2>
+//       </div>
+      
+//    );}
+

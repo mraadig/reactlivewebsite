@@ -1,0 +1,45 @@
+# Ignore node_modules directory
+/node_modules/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+# Ignore build and dist directories
+/build/
+/dist/
+
+# Ignore environment variables file
+.env
+
+# Ignore parcel cache
+.parcel-cache/
+.parcel-cache/
+.parcel-cache/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.parcel-cache/
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.parcel-cache/

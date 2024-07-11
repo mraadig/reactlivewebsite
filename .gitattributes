@@ -1,0 +1,7 @@
+* text=auto
+*.js text eol=lf
+*.json text eol=lf
+.parcel-cache/data.mdb filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+.parcel-cache/lock.mdb filter=lfs diff=lfs merge=lfs -text

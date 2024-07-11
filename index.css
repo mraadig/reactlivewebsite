@@ -1,0 +1,455 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Calibri, sans-serif;
+}
+:root {
+  --header-bg-color: rgb(255, 255, 255);
+  --footer-bg-color: rgb(255, 255, 255);
+  --body-bg-color: #e3e3e3;
+  --input-bg: #f2f2f2;
+  --input-bg-focus: #dbdbdb;
+  --text-color: #000;
+  --light-text-color: #545454;
+  --light-text-title: #353535;
+  --light-green: #27c527;
+  --dark-green: #016034;
+  --orange: #d97919;
+  --light-orange: #ffaf60;
+  --dark-orange: #c26100;
+  --x-dark-orange: rgb(157, 42, 1);
+  --light-red: rgb(236, 56, 56);
+  --white: #fff;
+  --light-white-text: #eaeaea;
+  --light-black: rgb(23, 23, 23);
+  --light-blue: #0463ac;
+  --dark-blue: #070062;
+}
+.content {
+  padding-top: 80px; /* Adjust this value based on the header height */
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 80px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: -2px 7px 5px -6px rgba(0, 0, 0, 0.61);
+  color: var(--light-text-color);
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: hidden;
+}
+.nav-items>ul{
+    list-style-type: none;
+    display: flex;
+   
+    
+}
+.nav-items>ul>li{
+    padding: 10px;
+}
+.card{
+    width: 200px;
+    height: 400px;
+    padding: 10px;
+    margin:10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+.card:hover{
+    box-shadow: rgba(186, 184, 184, 0.35) 0px 5px 15px;
+}
+.cardimg{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:150px;
+    margin-right:150px;
+    padding: 2rem;
+    justify-content: space-around;
+}
+#restaurant-link{
+   text-decoration: none;
+   color: black;
+}
+
+.error-container {
+    text-align: center;
+    font-size: large;
+    margin: 20px 0;
+  }
+
+.shimmer-card{
+    width: 200px;
+    height: 300px;
+    background: lightgray;
+    margin: 20px;
+}  
+
+.Menuimg{
+    width: 300px;
+    height: 400px; 
+}
+
+/* Add this CSS to your stylesheet */
+  a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from parent */
+    font-size: 16px; /* Optional: Set font size */
+    padding: 5px 10px; /* Optional: Add some padding */
+    transition: color 0.3s; /* Optional: Add a transition effect */
+  }
+  
+  a:hover {
+    color: #007BFF; /* Change color on hover */
+    
+  }
+  .search-container {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure it spans the full width */
+    height: 100%; /* Ensure it spans the full height */
+  }
+  
+  .search-container input[type=search] {
+    padding: 6px;
+    border: 1px solid black;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+
+  }
+  .search-container button {
+    width: 5%;
+    padding: 6px;
+    margin-top: 8px;
+    background: salmon;
+    border: none;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    color: salmon;
+    background-color: white;
+    border:1px solid salmon;
+  }
+
+  /* for About us */
+  /* General Styles */
+.column {
+  float: inline-start;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 16px; /* Adjusted for smaller padding */
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: salmon;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .column {
+    width: 50%; /* 2 columns for tablets */
+    padding: 0 8px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%; /* 1 column for mobile devices */
+    display: block;
+    padding: 0;
+  }
+}
+
+
+  /* for Button on Header i.e login */
+
+ .btnl{
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  color: white;
+  background: #282c34;
+  font-size: 17px;
+  border-radius: 20%;
+  border: none;
+  cursor: pointer;
+ }
+
+ /* contact page css */
+
+ .App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+}
+
+.contact-info {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.contact-info h2 {
+  color: black;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin: 10px 0;
+}
+
+.contact-info ul li a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Css  for cart */
+
+.cart-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+.cart-container h2 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+input[type="number"] {
+  width: 60px;
+}
+
+.cart-container button {
+  background-color: salmon;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid salmon;
+}
+
+.cart-container button:hover {
+  background-color: white;
+  color: salmon;
+  border: 1px solid salmon;
+}
+
+.total-price {
+  text-align: right;
+  margin-top: 20px;
+}
+
+
+/* restaurant Description and Menu */
+
+.resDes {
+  padding: 20px;
+  background-color: #3f4041;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.resDes h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.resDes img.Menuimg {
+  width: 200px;
+  height: 100px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resDes h3 {
+  font-size: 1.2em;
+  color: whitesmoke;
+  margin: 5px 0;
+}
+
+.resDes .low-rating {
+  background-color: var(--light-red);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: black;
+}
+
+.resDes .high-rating {
+  background-color: var(--light-green);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.resMenu {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resMenu h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.resMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resMenu ul li {
+  font-size: 1.2em;
+  color: #444;
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.resMenu ul li:last-child {
+  border-bottom: none;
+}
+
+.resMenu ul li button {
+  background-color: salmon;
+  border: 1px solid salmon;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.resMenu ul li button:hover {
+  background-color: white;
+  color: salmon;
+  border: 1px solid salmon;
+}
+
+/* Notification */
+
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}

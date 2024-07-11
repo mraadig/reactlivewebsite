@@ -1,8 +1,11 @@
-{
+{ 
+  "homepage": "https://mraadig.github.io/reactlivewebsite",
   "name": "react",
   "version": "1.0.0",
   "description": "this is new project",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "parcel index.html",
     "build": "parcel build index.html",
     "test": "jest"

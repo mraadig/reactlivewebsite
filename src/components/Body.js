@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import { RES_ITEM_API } from "../utils/constants";
 
 const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
@@ -18,8 +19,7 @@ const Body = () => {
   async function getRestaurants() {
     try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.66500&lng=77.44770&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-      );
+        RES_ITEM_API );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

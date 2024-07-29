@@ -1,0 +1,14 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/restaurants/*"
+  to = "/.netlify/functions/proxy"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/menu/*"
+  to = "/.netlify/functions/proxy"
+  status = 200
+  force = true

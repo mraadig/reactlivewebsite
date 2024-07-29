@@ -43,3 +43,6 @@ npm-debug.*
 *.orig.*
 web-build/
 .parcel-cache/
+
+# Local Netlify folder
+.netlify

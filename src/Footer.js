@@ -9,7 +9,7 @@ const Footer = () => {
           <h4>Contact Me</h4>
           <ul>
             <li>Email: <a href="mailto:adityakumargupta2101@gmail.com">adityakumargupta2101@gmail.com</a></li>
-            <li>Phone: <a href="tel:+918112914153">(+91) 8112914153</a></li>
+            <li>Phone: <a href="tel:+918112914153">(+91) 1234567890</a></li>
           </ul>
         </div>
         <div className="footer-section">

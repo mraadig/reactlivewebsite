@@ -8,7 +8,8 @@
     "deploy": "gh-pages -d dist",
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "clean": "parcel clean"
   },
   "author": "Aditya Kumar Gupta",
   "license": "ISC",
@@ -28,7 +29,9 @@
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.17.1",
+    "firebase": "^10.13.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1"

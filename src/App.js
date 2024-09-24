@@ -11,7 +11,8 @@ import { Error } from "./components/Error";
 import Cart from "./components/Cart";
 import { CartProvider, useCart } from "./utils/CartContext";
 import Notification from "./components/Notification";
-
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 const AppLayout = () => {
   const { notification } = useCart();
 
@@ -54,6 +55,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />
+      },
+      {
+        path: "/login",
+        element: <Login/>
+      },
+      {
+        path: "/signup",
+        element: <Signup/>
       }
     ]
   }
